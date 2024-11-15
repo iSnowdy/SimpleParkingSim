@@ -1,0 +1,39 @@
+Write a class that simulates a parking lot. Specifications are as follows:
+
+    - Variable that stores the number of parking slots.
+    - Number of cars that system will take in. Create as many threads as cars.
+    - The parking only has one entrance and one exit.
+    - At the entrance of the parking, there will be a system that will act as a control device. If the parking lot
+    has any available slots, it will allow the cars to go in. Otherwise, block them.
+    - The amount of time each vehicle will stay inside the parking lot, before exiting, is random.
+    - The moment a car exists the parking lot, it will notify the control device that its spot has been freed up.
+
+A car that exists the parking will wait a random time to go in once again. Therefore, it will create a cycle where
+vehicles are coming in and out at all time.
+
+Due to this characteristic, you must assert that each vehicle will have a turn to go inside the parking, avoiding
+resource starvation by the threads.
+
+Extras:
+
+    - The parking lot will have a certain amount of slots for disabled people (5%).
+    - These slots are exclusive for people who have that special permission. Standard customers will not be able to
+    park there. If the parking has no slots left for disabled people but has for normal customers, the former will
+    use a normal slot.
+
+Optional:
+
+    - Some customers are dickheads. They will use two slots instead of one when they park their car. Each client will
+    have a certain possibility (random) to be that nasty case. If that happens to be the case, the amount of parking
+    slots must be updated to minus two, instead of minus one.
+
+
+Do this program using notify and wait.
+
+
+------------------------
+Classes
+------------------------
+- Parking
+- Car (Threads) ---> two types. Normal / Disabled
+- Resource Manager?
